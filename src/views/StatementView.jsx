@@ -14,7 +14,8 @@ export default function StatementView() {
         <div className="card card--risk">
           <h2 className="card-title">$2,500 is not counted here yet</h2>
           <p className="card-body">
-            The Ellison award needs its donor thank-you letter by Aug 11. Until then it cannot be applied to your balance.
+            The Ellison Family Scholarship needs its donor thank-you letter by Aug 11. Until then it cannot be
+            applied to your balance.
           </p>
           <div className="actions">
             <label className={"btn btn--danger" + (p.pending === "letter" ? " is-pending" : "")}>
