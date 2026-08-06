@@ -189,6 +189,8 @@ button { font-family: inherit; }
 .card-title { font-size: 15px; font-weight: 500; margin: 0; }
 .card-body { grid-area: body; margin: 0; font-size: 13px; line-height: 20px; color: var(--secondary); max-width: 64ch; }
 .card--risk .card-body { color: var(--risk); }
+/* A heading and the body that explains it sit 8px apart outside the card grid. */
+.card > .card-title + .card-body { margin-top: 8px; }
 
 .card-value { grid-area: value; text-align: right; align-self: start; }
 .card-value .figure { font-size: 24px; line-height: 32px; }
