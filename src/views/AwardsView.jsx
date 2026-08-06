@@ -11,7 +11,7 @@ export default function AwardsView() {
           <h2 className="card-title">Ellison Family Scholarship</h2>
           {p.atRisk ? <Pill kind="risk">Letter due</Pill> : <Pill kind="done">Secured</Pill>}
         </div>
-        <p className="figure" style={{ margin: "14px 0 8px" }}>{money(2500)}</p>
+        <p className="figure" style={{ margin: "8px 0 4px" }}>{money(2500)}</p>
         <p className="card-body">
           {p.atRisk
             ? "Awarded Jul 28. The donor thank-you letter is due Aug 11. Without it the offer is withdrawn and the money returns to the fund."
@@ -38,7 +38,7 @@ export default function AwardsView() {
           <h2 className="card-title">Nursing Book Grant</h2>
           <Pill kind="done">Paid</Pill>
         </div>
-        <p className="figure" style={{ margin: "14px 0 8px" }}>{money(600)}</p>
+        <p className="figure" style={{ margin: "8px 0 4px" }}>{money(600)}</p>
         <p className="card-body">Paid to your student account on Aug 1. It appears on your statement as a credit.</p>
         <div className="actions">
           <button className="btn btn--secondary" onClick={() => p.setView("statement")}>See it on the statement</button>

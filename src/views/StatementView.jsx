@@ -29,6 +29,20 @@ export default function StatementView() {
 
       <div className="statement">
         <div className="statement-section">
+          <Meter
+            label="Covered so far"
+            value={aid}
+            max={charges}
+            note={
+              uncovered > 0
+                ? "The funds in review would cover the rest if they land."
+                : "Your costs are covered for the term."
+            }
+          />
+          <p className="uncovered">{money(Math.max(0, uncovered))} <span>still uncovered</span></p>
+        </div>
+
+        <div className="statement-section">
           <h3>Cost of attendance, fall 2026</h3>
           <dl className="ledger">
             {CHARGES.map(([k, v]) => (
@@ -56,20 +70,7 @@ export default function StatementView() {
           </dl>
         </div>
 
-        <div className="statement-section">
-          <Meter
-            label="Covered so far"
-            value={aid}
-            max={charges}
-            note={
-              uncovered > 0
-                ? "The funds in review would cover the rest if they land."
-                : "Your costs are covered for the term."
-            }
-          />
-          <p className="uncovered">{money(Math.max(0, uncovered))} <span>still uncovered</span></p>
-        </div>
-      </div>
+     </div>
     </>
   );
 }
